@@ -43,7 +43,9 @@ defmodule Pointy.MixProject do
       {:plug_cowboy, "~> 2.0"},
       {:mix_test_watch, "~> 0.9", only: :dev, runtime: false},
       {:nanoid, "~> 2.0.1"},
-      {:comeonin, "~> 5.1.1"}
+      {:argon2_elixir, "~> 2.0"},
+      {:ex_machina, "~> 2.3.0", only: :test},
+      {:faker, "~> 0.12.0"}
     ]
   end
 

@@ -6,7 +6,7 @@ defmodule Pointy.AccountsTest do
     assert {:ok, %Accounts.User{}} =
              Accounts.create_user(%{
                user: %{display_name: "Sean Clayton"},
-               credential: %{type: "email", username: "test@test.test", password: "test"}
+               credential: %{type: "email", username: "test@test.test", password_virtual: "test"}
              })
   end
 end

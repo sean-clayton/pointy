@@ -22,6 +22,7 @@ defmodule Pointy.DataCase do
       import Ecto.Changeset
       import Ecto.Query
       import Pointy.DataCase
+      import Pointy.Factory
     end
   end
 

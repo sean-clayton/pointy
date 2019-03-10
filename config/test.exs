@@ -16,3 +16,7 @@ config :pointy, Pointy.Repo,
   database: "pointy_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
+
+# Drastically decrease argon2's complexity (AND SECURITY!)
+# only during tests.
+config :argon2_elixir, t_cost: 1, m_cost: 8

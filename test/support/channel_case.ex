@@ -19,6 +19,7 @@ defmodule PointyWeb.ChannelCase do
     quote do
       # Import conveniences for testing with channels
       use Phoenix.ChannelTest
+      import Pointy.Factory
 
       # The default endpoint for testing
       @endpoint PointyWeb.Endpoint
