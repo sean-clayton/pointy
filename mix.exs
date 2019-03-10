@@ -40,7 +40,9 @@ defmodule Pointy.MixProject do
       {:postgrex, ">= 0.0.0"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+      {:mix_test_watch, "~> 0.9", only: :dev},
+      {:nanoid, "~> 2.0.1"}
     ]
   end
 

@@ -3,6 +3,7 @@ defmodule Pointy.Repo.Migrations.SnipReaction do
 
   def change do
     create table(:reactions) do
+      add :id, :string, size: 14, primary_key: true
       add :name, :string, null: false
       add :user_id, references(:users), null: false
       add :snip_id, references(:snips), null: false

@@ -4,6 +4,7 @@ defmodule Pointy.Schema do
       use Ecto.Schema
 
       @timestamps_opts type: :utc_datetime, inserted_at: :created_at
+      @primary_key {:id, Pointy.Nanoid, autogenerate: true}
     end
   end
 end

@@ -3,6 +3,7 @@ defmodule Pointy.Repo.Migrations.Snips do
 
   def change do
     create table(:snips) do
+      add :id, :string, size: 14, primary_key: true
       add :user_id, references(:users), null: false
       add :code, :text, null: false
       add :body, :text, null: false
