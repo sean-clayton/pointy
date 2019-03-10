@@ -42,7 +42,8 @@ defmodule Pointy.MixProject do
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
       {:mix_test_watch, "~> 0.9", only: :dev, runtime: false},
-      {:nanoid, "~> 2.0.1"}
+      {:nanoid, "~> 2.0.1"},
+      {:comeonin, "~> 5.1.1"}
     ]
   end
 
