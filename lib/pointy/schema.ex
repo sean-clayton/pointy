@@ -5,6 +5,7 @@ defmodule Pointy.Schema do
 
       @timestamps_opts type: :utc_datetime, inserted_at: :created_at
       @primary_key {:id, Pointy.Nanoid, autogenerate: true}
+      @foreign_key_type :string
     end
   end
 end
