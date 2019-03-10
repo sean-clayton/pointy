@@ -12,9 +12,25 @@ defmodule Pointy.Accounts.Credential do
     timestamps()
   end
 
-  def new_changeset(credential = %__MODULE__{}, attrs) do
+  def changeset(credential = %__MODULE__{}, attrs) do
     credential
     |> cast(attrs, [:type, :username, :password, :user_id])
     |> unique_constraint(:username, name: :credentials_type_username_index)
   end
+
+  def new_changeset(credential = %__MODULE__{}, attrs) do
+    credential
+    |> changeset(attrs)
+    |> put_password_hash()
+  end
+
+  defp put_password_hash(
+         %Ecto.Changeset{valid?: true, changes: %{password_virtual: password}} = changeset
+       ) do
+    changeset
+    |> put_change(:password, Comeonin.Argon2.hashpwsalt(password))
+    |> Map.drop([:password_virtual])
+  end
+
+  defp put_password_hash(changeset), do: changeset
 end

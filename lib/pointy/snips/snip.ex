@@ -2,6 +2,7 @@ defmodule Pointy.Snips.Snip do
   use Pointy.Schema
 
   schema "snips" do
+    field :title
     field :code
     field :body
     field :language
